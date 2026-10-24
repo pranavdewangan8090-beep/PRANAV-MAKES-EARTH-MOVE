@@ -1,0 +1,86 @@
+[
+ {
+  "name": "1 two-body motion vs Kepler",
+  "passed": true,
+  "detail": "Kepler 1-orbit closure 1.4e-14; N-body vs Kepler after 1 y: 261.0 m",
+  "seconds": 0.37
+ },
+ {
+  "name": "2 gravity of Sun / Earth / Moon / asteroid / fragments",
+  "passed": true,
+  "detail": "Sun->Earth 6.133e-03, Moon->Earth 3.715e-05, Earth(+asteroid)->Moon 3.035e-03 m/s^2; asteroid mass scales Earth's pull by 1.005023; fragment(1e20 kg @1e6 km)->Earth 6.674e-09 m/s^2",
+  "seconds": 0.01
+ },
+ {
+  "name": "3 equal and opposite forces",
+  "passed": true,
+  "detail": "|sum m a| / sum|m a| = 7.5e-17",
+  "seconds": 0.0
+ },
+ {
+  "name": "4+6 momentum & angular momentum in ejection",
+  "passed": true,
+  "detail": "high-fidelity ejection: |dP|/(M_E v_E) = 2.0e-16 (round-off), |dL|/|L| = 1.8e-16; fast model |dP|/(dm u) = 1.2e-05 (incl. 1 ms of solar gravity)",
+  "seconds": 0.01
+ },
+ {
+  "name": "5 energy accounting of propulsion",
+  "passed": true,
+  "detail": "measured system energy change vs 1/2 mu u^2 - G dm M/R: rel diff 2.6e-08; drawn = KE/eta; budget never exceeded (tiny budget -> packet reduced to 1.11e+17 kg)",
+  "seconds": 0.0
+ },
+ {
+  "name": "7 finite asteroid mass & fragment mass accounting",
+  "passed": true,
+  "detail": "total mass + escaped mass - initial = 1.4e-16 (rel); merges=18, escaped 1.60e+19 kg; reservoir cannot go negative (5e18 kg reservoir -> ejected 5.00e+18 kg)",
+  "seconds": 0.02
+ },
+ {
+  "name": "8 reversed ejection direction",
+  "passed": true,
+  "detail": "prograde da = +0.0225 AU, retrograde da = -0.0217 AU (asymmetry 0.03)",
+  "seconds": 0.01
+ },
+ {
+  "name": "9 fragment fall-back / escape / Earth impact",
+  "passed": true,
+  "detail": "sub-escape packet falls back (no net recoil, energy lost): True; fast packet leaves the system and is ledgered as escaped: True; fragment aimed at Earth merges with momentum conserved: True",
+  "seconds": 0.0
+ },
+ {
+  "name": "11 reproducibility (fixed seed)",
+  "passed": true,
+  "detail": "identical results for seed 7 (a=1.648587 AU)",
+  "seconds": 0.08
+ },
+ {
+  "name": "13 viewer continuity (interpolation of recorded states)",
+  "passed": true,
+  "detail": "ballistic join between rows 1.1e-11 AU (no hidden jumps); viewer Hermite curve vs exact arc max 3.3e-05 AU; recoil |v_post - v_pre| matches recorded value to 5.2e-12; packet path bends 6.4e-05 (relative) from a straight line after 1 day under solar gravity",
+  "seconds": 0.01
+ },
+ {
+  "name": "14 Moon in the fast (training) model",
+  "passed": true,
+  "detail": "1 y without thrust: Earth-Moon distance fast 363,297-405,504 km vs N-body 361,807-399,330 km (max diff 10,422 km); Moon's orbital phase drifts 22 deg/yr (Sun's tide on the Moon not in the fast model); barycentre diff 99 km; Earth wobble from the Moon's pull 4,874 km; recoil changes the Earth-Moon relative velocity by Earth's recoil only (rel. error 6.4e-12); Moon bound: yes",
+  "seconds": 0.0
+ },
+ {
+  "name": "10 integrator convergence",
+  "passed": true,
+  "detail": "Earth position error after 10 y at dt 12/6/3 h: 498635/37700/2360 m (ratios 13.2, 16.0; 4th order -> 16)",
+  "seconds": 0.03
+ },
+ {
+  "name": "10b energy / angular-momentum drift",
+  "passed": true,
+  "detail": "100 y ballistic: |dE/E| = 9.2e-12, |dL|/|L| = 1.1e-15",
+  "seconds": 0.03
+ },
+ {
+  "name": "12 fast model vs high-fidelity N-body",
+  "passed": true,
+  "detail": "heuristic, 1,500 y: a fast 2.24011 vs high-fidelity 2.24011 AU (rel 1.5e-08), |de| 6.1e-08",
+  "seconds": 0.62
+ }
+]
